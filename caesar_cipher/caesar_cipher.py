@@ -14,20 +14,21 @@ def encrypt(text, shift):
 
     # turns those new unicode values into new char adds chars to decrypted
     decrypted += chr(encrypted)
+    
+  print(decrypted)
+  decrypted = decrypted.replace("$"," ")
+  return('DECRYPTED OUTPUT: ' + decrypted)
 
-  print('DECRYPTED OUTPUT: ' + decrypted)
-
-
-
-
-
-if __name__ == '__main__':
-
-  decrypted = encrypt('all cops are bastards', 4)
-  assert decrypted == 'epp gstw evi fewxevhw'
-
-  decrypted = encrypt('klace')
-  assert decrypted == 'opegi'
+print(encrypt('all cops are bastards',4))
 
 
-  print('TEST PASSED ')
+# if __name__ == '__main__':
+
+#   decrypted = encrypt('all cops are bastards', 4)
+#   assert decrypted == 'epp gstw evi fewxevhw'
+
+#   # decrypted = encrypt('klace')
+#   # assert decrypted == 'opegi'
+
+
+#   print('TEST PASSED ')
